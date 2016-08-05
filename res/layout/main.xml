@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stateheight" >
+
+        <LinearLayout
+            android:id="@+id/wlan_net_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="50dip" >
+
+            <ImageView
+                android:id="@+id/wifi_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/net_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/page3_ethernet_1"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/_3G_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/bluetooth_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bluetooth"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/SDcard_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sdcard"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/USB_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/usb"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:visibility="gone" />
+
+           <net.bestidear.bestidearlauncher.Clock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingTop="6dip"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!--net.bestidear.bestidearlauncher.Clock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/weather_content"
+                android:gravity="right"
+                android:paddingLeft="10dip"
+                android:paddingTop="30dip"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" /-->
+
+            <LinearLayout
+                android:id="@+id/weather_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingLeft="10dip"
+                android:paddingRight="13dip" >
+
+                <LinearLayout
+                    android:id="@+id/weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/weather_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true" />
+
+                    <LinearLayout
+                        android:id="@+id/weather_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/day_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="天气"
+                            android:textColor="#FFFFFF"
+                            android:textSize="25dp" />
+
+                        <TextView
+                            android:id="@+id/day_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="温度"
+                            android:textColor="#FFFFFF"
+                            android:textSize="25dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workplace"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:orientation="horizontal" >
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="none" >
+
+            <net.bestidear.bestidearlauncher.model.WorkplaceLayout
+                android:id="@+id/workplaceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="50dp" >
+            </net.bestidear.bestidearlauncher.model.WorkplaceLayout>
+        </HorizontalScrollView>
+        
+    </LinearLayout>
+    <net.bestidear.bestidearlauncher.model.AddLayout 
+        android:id="@+id/addblocklayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" >
+        
+    </net.bestidear.bestidearlauncher.model.AddLayout>
+
+</LinearLayout>

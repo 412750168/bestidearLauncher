@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_bg" >
+	<LinearLayout 
+	    android:id="@+id/weather_today_layout" 
+	    android:layout_width="1000dp" 
+	    android:layout_height="500dp" 
+	    android:layout_marginLeft="150dp" 
+	    android:layout_marginTop="100dp"
+	    android:background="@drawable/today_layout_bg" 
+	    android:orientation="vertical">
+    	<LinearLayout 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="400dp"
+    	    android:paddingTop="50dp"
+    	    android:orientation="horizontal" >
+
+    	    <LinearLayout 
+    	        android:id="@+id/today_layout" 
+    	        android:layout_width="fill_parent" 
+    	        android:layout_weight="1" 
+    	        android:layout_height="match_parent" 
+    	        android:orientation="vertical">
+				  	<TextView android:id="@+id/today_date" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="wrap_content" 
+				  	    android:textSize="20dp" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:textColor="#000000"
+				  	    android:text="日期" /> 
+				  	<ImageView 
+				  	    android:id="@+id/today_icon" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="120dp" 
+				  	    android:adjustViewBounds="true" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:src="@drawable/weathericon_condition_17" /> 
+				  	<TextView 
+				  	    android:id="@+id/today_weather" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="wrap_content" 
+				  	    android:textSize="20dp" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:textColor="#000000"
+				  	    android:text="天气" /> 
+				  	<TextView 
+				  	    android:id="@+id/today_temp" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="wrap_content" 
+				  	    android:textSize="20dp" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:textColor="#000000"
+				  	    android:text="温度" /> 
+		  	</LinearLayout>
+		  	
+    	    <LinearLayout 
+    	        android:id="@+id/tomorrow_layout" 
+    	        android:layout_width="fill_parent" 
+    	        android:layout_weight="1" 
+    	        android:layout_height="match_parent" 
+    	        android:orientation="vertical">
+				  	<TextView android:id="@+id/tomorrow_date" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="wrap_content" 
+				  	    android:textSize="20dp" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:textColor="#000000"
+				  	    android:text="日期" /> 
+				  	<ImageView 
+				  	    android:id="@+id/tomorrow_icon" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="120dp" 
+				  	    android:adjustViewBounds="true" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:src="@drawable/weathericon_condition_17" /> 
+				  	<TextView 
+				  	    android:id="@+id/tomorrow_weather" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="wrap_content" 
+				  	    android:textSize="20dp" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:textColor="#000000"
+				  	    android:text="天气" /> 
+				  	<TextView 
+				  	    android:id="@+id/tomorrow_temp" 
+				  	    android:layout_width="wrap_content" 
+				  	    android:layout_height="wrap_content" 
+				  	    android:textSize="20dp" 
+				  	    android:layout_gravity="center_horizontal" 
+				  	    android:textColor="#000000"
+				  	    android:text="温度" /> 
+		  	</LinearLayout>
+    		
+		</LinearLayout>
+
+	    <LinearLayout
+	        android:layout_width="500dp"
+	        android:paddingTop="5dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center" >
+	
+	        <Spinner
+	            android:id="@+id/spinner_province"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1" />
+	
+	        <Spinner
+	            android:id="@+id/spinner_city"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1" />
+	
+	    </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

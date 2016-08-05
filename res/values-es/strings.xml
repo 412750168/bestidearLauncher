@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bestidearlauncher</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="selection">Seleccionado %s</string>
+    <string name="select_all">Sel. Todo</string>
+    <string name="unselect_all">Deseleccionar</string>
+	<string name="allapp">Apps</string>
+	<string name="setting">Ajustes</string>
+</resources>
